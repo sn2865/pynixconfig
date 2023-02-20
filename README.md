@@ -15,6 +15,7 @@ credentials, etc.. using a simple python generated user interface.
 # Instructions
 
 clone repo on your local
+
 run command: python3 config.py <COLOR>
 
 The following colors are currently available:
