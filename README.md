@@ -2,7 +2,9 @@
 Configure your UNIX environment simply using python
 
 
-<img src="https://img.shields.io/github/license/sn2865/pynixconfig" alt="pynixconfig"></img>
+<img src="https://img.shields.io/github/license/sn2865/pynixconfig" alt="license"></img>
+
+<img src="https://img.shields.io/github/issues/sn2865/pynixconfig" alt="issues"></img>
 
 # Overview
 
