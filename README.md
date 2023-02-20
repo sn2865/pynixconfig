@@ -19,4 +19,5 @@ run command: python3 config.py <COLOR>
 
 The following colors are currently available:
 black, red, green, brown, blue, magenta, cyan, gray,
+
 bold-red, bold-green, bold-brown, bold-blue, bold-magenta, bold-cyan, bold-gray
