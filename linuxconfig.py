@@ -1,4 +1,4 @@
-# still need to deal with the case LSCOLORS does not exist yet in bash_profile
+# still need to deal with the case LSCOLORS alredy exists in .bashrc
 
 import os
 import os.path
