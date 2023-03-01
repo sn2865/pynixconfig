@@ -5,45 +5,48 @@ import os.path
 import sys
 
 n = len(sys.argv)
-color = sys.argv[1]
-print(color)
+print(n)
+font = sys.argv[1]
+color = sys.argv[2]
 
-path='~/.bash_profile'
+path='~/.bashrc'
 full_path = os.path.expanduser(path)
+print(full_path)
 
-color_dict = {
-    "black": "a",
-    "red": "b",
-    "green": "c",
-    "brown": "d",
-    "blue": "e",
-    "magenta": "f",
-    "cyan": "g",
-    "gray": "h",
-    "bold-red": "B",
-    "bold-green": "C",
-    "bold-brown": "D",
-    "bold-blue": "E",
-    "bold-magenta": "F",
-    "bold-cyan": "G",
-    "bold-gray": "H",
+font_dict = {
+    "bold": "1",
+    "underlined": "4",
+}
+
+color_dict = { # change
+    "red": "31",
+    "green": "32",
+    "orange": "33",
+    "blue": "34",
+    "purple": "35",
+    "cyan": "36",
+    "grey": "37",
 }
 
 color_code = color_dict[color]
-curr_colors = os.popen('printenv LSCOLORS').read()
-search_text = "export LSCOLORS="+curr_colors
+font_code = font_dict[font]
+curr_colors = os.popen('echo $LS_COLORS').read()
+print(curr_colors)
+config_string = "di="+font_code+";"+color_code
+print(config_string)
+#if curr_colors = "": # undefined or whatever it is
+    #add line to end of .bashrc file
+#else:
+search_text = "LS_COLORS="+curr_colors
 print(search_text)
-replace_text = "export LSCOLORS="+ color_code + "xfxcxdxbxegedabagacad\n"
+replace_text = "LS_COLORS="+ config_string
 print(replace_text)
 
-bash_profile = open(full_path, 'r')
-data = bash_profile.read()
-data = data.replace(search_text, replace_text)
-#print(data)
+bashrc = open(full_path, 'r')
+data = bashrc.read()
+#data = data.replace(search_text, replace_text)
+data = data + "\n" + "LS_COLORS=" + '"{}"'.format(config_string)
 
 with open(full_path, 'w') as file:
     file.write(data)
 
-source_command = "source " + full_path
-print(source_command)
-os.system(source_command)
