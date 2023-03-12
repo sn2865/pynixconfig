@@ -1,5 +1,6 @@
 from pynixconfig import get_color_code, get_font_code, get_full_path
 from pynixconfig import add_ls_colors, config
+import os
 
 
 def test_color_code():
@@ -12,7 +13,7 @@ def test_font_code():
 
 
 def test_get_full_path():
-    assert get_full_path("~/.bashrc") == "/Users/sergionahas/.bashrc"
+    assert get_full_path("~/.bashrc") == os.path.expanduser("~/.bashrc")
 
 
 def test_config():
