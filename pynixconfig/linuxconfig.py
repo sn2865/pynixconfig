@@ -55,6 +55,12 @@ def main(color, font):
     data = bashrc.read()
 
     fin_data = add_ls_colors(data, config_string)  # assumes LS_COLROS env does not exist in .bashrc
-
     with open(full_path, "w") as file:
         file.write(fin_data)
+
+    return fin_data.splitlines()[-1]
+
+if __name__ == "__main__":
+    color = "red"
+    font = "bold"
+    main(color, font)

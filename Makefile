@@ -11,6 +11,13 @@ install:  ## install library
 	python -m pip install .
 
 #########
+# RUN #
+#########
+
+run:
+	pyhton3 pynixconfig/linuxconfig.py
+
+#########
 # LINTS #
 #########
 lint:  ## run static analysis with flake8

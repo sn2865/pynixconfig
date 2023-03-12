@@ -4,4 +4,5 @@ from .linuxconfig import (
     get_full_path,
     add_ls_colors,
     config,
+    main,
 )

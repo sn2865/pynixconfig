@@ -1,5 +1,5 @@
 from pynixconfig import get_color_code, get_font_code, get_full_path
-from pynixconfig import add_ls_colors, config
+from pynixconfig import add_ls_colors, config, main
 import os
 
 
@@ -22,3 +22,6 @@ def test_config():
 
 def test_add_ls_colors():
     assert add_ls_colors("", "di=1;31") == '\nLS_COLORS="di=1;31"'
+
+def integration_test():
+    assert main("red", "bold") == 'LS_COLORS="di=1;31"'
