@@ -1,5 +1,4 @@
 from linuxconfig import get_full_path, config, get_color_code, get_font_code, main
-import os
 
 color = "red"
 font = "bold"
