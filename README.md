@@ -6,6 +6,10 @@ Configure your UNIX environment simply using python
 
 <img src="https://img.shields.io/github/issues/sn2865/pynixconfig" alt="issues"></img>
 
+![Build Status](https://github.com/sn2865/pynixconfig/actions/workflows/build.yml/badge.svg)
+
+[![codecov](https://codecov.io/gh/sn2865/pynixconfig/branch/main/graph/badge.svg)](https://codecov.io/gh/sn2865/pynixconfig)
+
 # Overview
 
 This library will enable beginners to easily configure their UNIX environment for it to look cool.
