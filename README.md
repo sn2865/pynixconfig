@@ -19,11 +19,6 @@ credentials, etc.. using a simple python generated user interface.
 # Instructions
 
 clone repo on your local
+modify color and font in pynixconfig/linuxconfig.py
 
-run command: python3 config.py <COLOR>
-
-The following colors are currently available:
-  
-black, red, green, brown, blue, magenta, cyan, gray,
-
-bold-red, bold-green, bold-brown, bold-blue, bold-magenta, bold-cyan, bold-gray
+run command: make run
