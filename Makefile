@@ -15,7 +15,7 @@ install:  ## install library
 #########
 
 run:
-	pyhton3 pynixconfig/linuxconfig.py
+	python3 pynixconfig/linuxconfig.py
 
 #########
 # LINTS #
