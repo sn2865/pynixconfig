@@ -60,6 +60,7 @@ def main(color, font):
 
     return fin_data.splitlines()[-1]
 
+
 if __name__ == "__main__":
     color = "red"
     font = "bold"
