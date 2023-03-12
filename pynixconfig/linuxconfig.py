@@ -40,10 +40,6 @@ def add_ls_colors(curr_text, text_add):
 
 
 def main(color, font):
-    # n = len(sys.argv)
-    # font = sys.argv[1]
-    # color = sys.argv[2]
-
     path = "~/.bashrc"
 
     full_path = get_full_path(path)
@@ -55,17 +51,8 @@ def main(color, font):
     config_string = config(color_code, font_code)
     print(config_string)
 
-    # if curr_colors = "": # undefined or whatever it is
-    # add line to end of .bashrc file
-    # else:
-    # search_text = "LS_COLORS="+curr_colors
-    # print(search_text)
-    # replace_text = "LS_COLORS="+ config_string
-    # print(replace_text)
-
     bashrc = open(full_path, "r")
     data = bashrc.read()
-    # data = data.replace(search_text, replace_text)
 
     fin_data = add_ls_colors(data, config_string)  # assumes LS_COLROS env does not exist in .bashrc
 
