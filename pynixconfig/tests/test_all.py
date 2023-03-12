@@ -1,5 +1,5 @@
-from scripts import get_color_code, get_font_code, get_full_path
-from scripts import add_ls_colors, config
+from pynixconfig import get_color_code, get_font_code, get_full_path
+from pynixconfig import add_ls_colors, config
 
 
 def test_color_code():
