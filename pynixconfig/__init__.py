@@ -5,4 +5,5 @@ from .linuxconfig import (
     add_ls_colors,
     config,
     main,
+    replace_ls_colors,
 )

@@ -40,6 +40,11 @@ def add_ls_colors(curr_text, text_add):
     return output
 
 
+def replace_ls_colors(config_string):
+    new_line = "LS_COLORS=" + '"{}"'.format(config_string)
+    return new_line
+
+
 def main(color, font):
     path = "~/.bashrc"
 
@@ -54,19 +59,16 @@ def main(color, font):
 
     bashrc = open(full_path, "r")
     data = bashrc.read()
-    
+
     search_line = 'LS_COLORS='
     exists = False
-    new_line = "LS_COLORS=" + '"{}"'.format(config_string)
     with open(full_path, 'r') as file:
         lines = file.readlines()
     with open(full_path, 'w') as file:
         for line in lines:
             if search_line in line:
                 exists = True
-                print("Line exists")
-                print(line.strip())
-                file.write(new_line)
+                file.write(replace_ls_colors(config_string))
             else:
                 file.write(line)
 
@@ -77,6 +79,8 @@ def main(color, font):
             file.write(fin_data)
 
         return fin_data.splitlines()[-1]
+
+    return replace_ls_colors(config_string)
 
 
 if __name__ == "__main__":
