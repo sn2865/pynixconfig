@@ -10,6 +10,8 @@ Configure your UNIX environment simply using python
 
 [![codecov](https://codecov.io/gh/sn2865/pynixconfig/branch/main/graph/badge.svg)](https://codecov.io/gh/sn2865/pynixconfig)
 
+[![PyPI](https://img.shields.io/pypi/v/pynixconfig)](https://pypi.org/project/pynixconfig/0.1.0/)
+
 # Overview
 
 This library will enable beginners to easily configure their UNIX environment for it to look cool.
