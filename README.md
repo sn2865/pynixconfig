@@ -16,6 +16,16 @@ This library will enable beginners to easily configure their UNIX environment fo
 It will allow users to configure anything ranging from environment variables, what their terminal looks like,
 credentials, etc.. using a simple python generated user interface.
 
+# Installation
+
+pip install pynixconfig
+
+# Using the Library
+
+1. modify your configs in pynixconfig/linuxconfig.py
+
+2. Run the following command in the root directory of project: $ make run
+
 # Instructions
 
 clone repo on your local
