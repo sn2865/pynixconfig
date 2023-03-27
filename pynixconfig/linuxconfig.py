@@ -1,7 +1,6 @@
 # still need to deal with the case LSCOLORS alredy exists in .bashrc
 import os
 import os.path
-import fileinput
 
 font_dict = {
     "bold": "1",
@@ -72,9 +71,9 @@ def main(color, font):
             else:
                 file.write(line)
 
-    if exists == False:
+    if exists is False:
         print("does not exist")
-        fin_data = add_ls_colors(data, config_string)  # assumes LS_COLROS env does not exist in .bashrc
+        fin_data = add_ls_colors(data, config_string)
         with open(full_path, "w") as file:
             file.write(fin_data)
 
