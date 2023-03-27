@@ -1,6 +1,7 @@
 # still need to deal with the case LSCOLORS alredy exists in .bashrc
 import os
 import os.path
+import fileinput
 
 font_dict = {
     "bold": "1",
@@ -53,15 +54,32 @@ def main(color, font):
 
     bashrc = open(full_path, "r")
     data = bashrc.read()
+    
+    search_line = 'LS_COLORS='
+    exists = False
+    new_line = "LS_COLORS=" + '"{}"'.format(config_string)
+    with open(full_path, 'r') as file:
+        lines = file.readlines()
+    with open(full_path, 'w') as file:
+        for line in lines:
+            if search_line in line:
+                exists = True
+                print("Line exists")
+                print(line.strip())
+                file.write(new_line)
+            else:
+                file.write(line)
 
-    fin_data = add_ls_colors(data, config_string)  # assumes LS_COLROS env does not exist in .bashrc
-    with open(full_path, "w") as file:
-        file.write(fin_data)
+    if exists == False:
+        print("does not exist")
+        fin_data = add_ls_colors(data, config_string)  # assumes LS_COLROS env does not exist in .bashrc
+        with open(full_path, "w") as file:
+            file.write(fin_data)
 
-    return fin_data.splitlines()[-1]
+        return fin_data.splitlines()[-1]
 
 
 if __name__ == "__main__":
-    color = "red"
+    color = "cyan"
     font = "bold"
     main(color, font)
