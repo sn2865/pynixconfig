@@ -83,6 +83,23 @@ def main(color, font):
 
 
 if __name__ == "__main__":
+    '''
+    Possible colors:
+    red
+    green
+    orange
+    blue
+    purple
+    cyan
+    grey
+
+    Possible fonts:
+    bold
+    underlined
+
+    NOTE: To see the changes in the terminal, you will need to restart the terminal
+    '''
+    
     color = "cyan"
     font = "bold"
     main(color, font)

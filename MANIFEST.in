@@ -2,6 +2,7 @@ graft pynixconfig
 
 include LICENSE
 include README.md
+include CONTRIBUTING.md
 
 include pyproject.toml
 include Makefile
