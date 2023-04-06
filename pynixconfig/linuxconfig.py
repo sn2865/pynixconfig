@@ -99,7 +99,7 @@ if __name__ == "__main__":
 
     NOTE: To see the changes in the terminal, you will need to restart the terminal
     '''
-    
+
     color = "cyan"
     font = "bold"
     main(color, font)
