@@ -12,6 +12,8 @@ Configure your UNIX environment simply using python
 
 [![PyPI](https://img.shields.io/pypi/v/pynixconfig)](https://pypi.org/project/pynixconfig/0.1.0/)
 
+[![Docs](https://img.shields.io/readthedocs/pynixconfig.svg)](https://pynixconfig.readthedocs.io/en/latest/)
+
 # Overview
 
 This library will enable beginners to easily configure their UNIX environment for it to look cool.
