@@ -44,12 +44,7 @@ def replace_ls_colors(config_string):
     return new_line
 
 
-def bash_shell(color_code):
-    ps1 = r'PS1="\e[0;' + color_code + r'm[\u@\h \W]\$ \e[m "'
-    return ps1
-
-
-def main(color, font, shell):
+def main(color, font):
     path = "~/.bashrc"
 
     full_path = get_full_path(path)
@@ -83,9 +78,6 @@ def main(color, font, shell):
             file.write(fin_data)
 
         return fin_data.splitlines()[-1]
-    if shell is True:
-        with open(full_path, 'a') as file:
-            file.write("\n" + bash_shell(color_code))
 
     return replace_ls_colors(config_string)
 
@@ -105,11 +97,9 @@ if __name__ == "__main__":
     bold
     underlined
 
-    NOTE: To see the changes in the terminal,
-    you will need to restart the terminal
+    NOTE: To see the changes in the terminal, you will need to restart the terminal
     '''
 
-    color = "blue"
+    color = "cyan"
     font = "bold"
-    shell = True
-    main(color, font, shell)
+    main(color, font)
