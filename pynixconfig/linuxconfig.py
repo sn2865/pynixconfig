@@ -43,9 +43,11 @@ def replace_ls_colors(config_string):
     new_line = "LS_COLORS=" + '"{}"'.format(config_string)
     return new_line
 
+
 def bash_shell(color_code):
     ps1 = r'PS1="\e[0;' + color_code + r'm[\u@\h \W]\$ \e[m "'
     return ps1
+
 
 def main(color, font, shell):
     path = "~/.bashrc"
@@ -103,10 +105,11 @@ if __name__ == "__main__":
     bold
     underlined
 
-    NOTE: To see the changes in the terminal, you will need to restart the terminal
+    NOTE: To see the changes in the terminal,
+    you will need to restart the terminal
     '''
 
     color = "blue"
     font = "bold"
-    shell=True
+    shell = True
     main(color, font, shell)
