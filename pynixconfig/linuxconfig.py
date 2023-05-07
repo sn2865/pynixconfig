@@ -49,7 +49,7 @@ def bash_shell(color_code):
     return ps1
 
 
-def main(color, font, shell):
+def main(color, font, prompt):
     path = "~/.bashrc"
 
     full_path = get_full_path(path)
@@ -83,7 +83,7 @@ def main(color, font, shell):
             file.write(fin_data)
 
         return fin_data.splitlines()[-1]
-    if shell is True:
+    if prompt != "":
         with open(full_path, 'a') as file:
             file.write("\n" + bash_shell(color_code))
 
@@ -111,5 +111,5 @@ if __name__ == "__main__":
 
     color = "blue"
     font = "bold"
-    shell = True
-    main(color, font, shell)
+    prompt = "red"
+    main(color, font, prompt)
