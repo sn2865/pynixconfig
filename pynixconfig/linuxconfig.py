@@ -55,6 +55,7 @@ def main(color, font, prompt):
     full_path = get_full_path(path)
     color_code = get_color_code(color)
     font_code = get_font_code(font)
+    prompt_code = get_color_code(prompt)
 
     curr_colors = os.popen("echo $LS_COLORS").read()  # make into function?
     print(curr_colors)
@@ -85,7 +86,7 @@ def main(color, font, prompt):
         return fin_data.splitlines()[-1]
     if prompt != "":
         with open(full_path, 'a') as file:
-            file.write("\n" + bash_shell(color_code))
+            file.write("\n" + bash_shell(prompt_code))
 
     return replace_ls_colors(config_string)
 
