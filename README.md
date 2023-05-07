@@ -16,9 +16,12 @@ Configure your UNIX environment simply using python
 
 # Overview
 
-This library will enable beginners to easily configure their UNIX environment for it to look cool.
-It will allow users to configure anything ranging from environment variables, what their terminal looks like,
-credentials, etc.. using a simple python generated user interface.
+This library allows to easily configure a linux terminal. 
+
+The three configurations developed so far:
+file colors
+shell color
+fonts
 
 # Demo
 
@@ -37,6 +40,6 @@ pip install pynixconfig
 # Instructions
 
 clone repo on your local
-modify color and font in pynixconfig/linuxconfig.py
+modify color and font and shell in pynixconfig/linuxconfig.py
 
 run command: make run

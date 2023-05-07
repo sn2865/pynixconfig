@@ -44,12 +44,18 @@ def replace_ls_colors(config_string):
     return new_line
 
 
-def main(color, font):
+def bash_shell(color_code):
+    ps1 = r'PS1="\e[0;' + color_code + r'm[\u@\h \W]\$ \e[m "'
+    return ps1
+
+
+def main(color, font, prompt):
     path = "~/.bashrc"
 
     full_path = get_full_path(path)
     color_code = get_color_code(color)
     font_code = get_font_code(font)
+    prompt_code = get_color_code(prompt)
 
     curr_colors = os.popen("echo $LS_COLORS").read()  # make into function?
     print(curr_colors)
@@ -78,6 +84,9 @@ def main(color, font):
             file.write(fin_data)
 
         return fin_data.splitlines()[-1]
+    if prompt != "":
+        with open(full_path, 'a') as file:
+            file.write("\n" + bash_shell(prompt_code))
 
     return replace_ls_colors(config_string)
 
@@ -102,4 +111,5 @@ if __name__ == "__main__":
 
     color = "cyan"
     font = "bold"
-    main(color, font)
+    prompt = "red"
+    main(color, font, prompt)
