@@ -6,5 +6,4 @@ from .linuxconfig import (
     config,
     main,
     replace_ls_colors,
-    bash_shell,
 )

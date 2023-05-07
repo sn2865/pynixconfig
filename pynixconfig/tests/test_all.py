@@ -1,6 +1,5 @@
 from pynixconfig import get_color_code, get_font_code, get_full_path
 from pynixconfig import add_ls_colors, config, main, replace_ls_colors
-from pynixconfig import bash_shell
 import os
 
 
@@ -27,10 +26,6 @@ def test_add_ls_colors():
 
 def test_replace_ls_colors():
     assert replace_ls_colors("di=1;31") == 'LS_COLORS="di=1;31"'
-
-
-def test_bash_shell():
-    assert bash_shell("34") == r'PS1="\e[0;34m[\u@\h \W]\$ \e[m "'
 
 
 def integration_test():
