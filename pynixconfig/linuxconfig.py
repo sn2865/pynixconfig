@@ -106,11 +106,10 @@ if __name__ == "__main__":
     bold
     underlined
 
-    NOTE: To see the changes in the terminal,
-    you will need to restart the terminal
+    NOTE: To see the changes in the terminal, you will need to restart the terminal
     '''
 
-    color = "blue"
+    color = "cyan"
     font = "bold"
     prompt = "red"
     main(color, font, prompt)
