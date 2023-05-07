@@ -10,7 +10,7 @@ Configure your UNIX environment simply using python
 
 [![codecov](https://codecov.io/gh/sn2865/pynixconfig/branch/main/graph/badge.svg)](https://codecov.io/gh/sn2865/pynixconfig)
 
-[![PyPI](https://img.shields.io/pypi/v/pynixconfig)](https://pypi.org/project/pynixconfig/0.1.0/)
+[![PyPI](https://img.shields.io/pypi/v/pynixconfig)](https://pypi.org/project/pynixconfig/0.1.1/)
 
 [![Docs](https://img.shields.io/readthedocs/pynixconfig.svg)](https://pynixconfig.readthedocs.io/en/latest/)
 
