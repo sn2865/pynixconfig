@@ -12,19 +12,8 @@
 #
 import os
 import sys
-<<<<<<< HEAD
-=======
-import pydata_sphinx_theme
-from recommonmark.transform import AutoStructify
->>>>>>> 30e02043f2368eb481937782c367369fcfcb78a2
 
 sys.path.insert(0, os.path.abspath('..'))
-
-def setup(app):
-    app.add_config_value('recommonmark_config', {
-        'auto_toc_tree_section': 'Contents',
-    }, True)
-    app.add_transform(AutoStructify)
 
 
 # -- Project information -----------------------------------------------------
