@@ -11,7 +11,7 @@ name = "pynixconfig"
 authors = [{name = "Sergio Nahas", email = "sn2865@columbia.edu"}]
 description="Simple way to config your terminal colors"
 readme = "README.md"
-version = "0.1.2"
+version = "0.1.1"
 requires-python = ">=3.7"
 
 dependencies = []

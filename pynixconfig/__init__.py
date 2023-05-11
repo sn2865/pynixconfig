@@ -9,4 +9,4 @@ from .linuxconfig import (
     bash_shell,
 )
 
-__version__ = "0.1.2"
+__version__ = "0.1.1"
