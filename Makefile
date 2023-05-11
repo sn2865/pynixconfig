@@ -28,7 +28,7 @@ lint:  ## run static analysis with flake8
 lints: lint
 
 format:  ## run autoformatting with black
-	python -m black pynixconfig/ setup.py
+	python -m black -t py38 pynixconfig/ setup.py
 
 #########
 # TESTS #
