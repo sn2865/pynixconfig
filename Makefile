@@ -21,14 +21,14 @@ run:
 # LINTS #
 #########
 lint:  ## run static analysis with flake8
-	python -m black -t py38 --check pynixconfig setup.py
-	python -m flake8 pynixconfig setup.py
+	python -m black -t py38 --check pynixconfig/__init__.py pynixconfig/tests/test_all.py setup.py
+	python -m flake8 setup.py
 
 # Alias
 lints: lint
 
 format:  ## run autoformatting with black
-	python -m black pynixconfig/ setup.py
+	python -m black -t py38 pynixconfig/ setup.py
 
 #########
 # TESTS #

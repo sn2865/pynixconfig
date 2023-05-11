@@ -8,3 +8,5 @@ from .linuxconfig import (
     replace_ls_colors,
     bash_shell,
 )
+
+__version__ = "0.1.2"

@@ -12,6 +12,11 @@
 #
 import os
 import sys
+<<<<<<< HEAD
+=======
+import pydata_sphinx_theme
+from recommonmark.transform import AutoStructify
+>>>>>>> 30e02043f2368eb481937782c367369fcfcb78a2
 
 sys.path.insert(0, os.path.abspath('..'))
 

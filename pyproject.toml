@@ -11,7 +11,7 @@ name = "pynixconfig"
 authors = [{name = "Sergio Nahas", email = "sn2865@columbia.edu"}]
 description="Simple way to config your terminal colors"
 readme = "README.md"
-version = "0.1.1"
+version = "0.1.2"
 requires-python = ">=3.7"
 
 dependencies = []
@@ -37,10 +37,10 @@ repository = "https://github.com/sn2865/pynixconfig"
 
 [project.optional-dependencies]
 develop = [
-    "black>=22",
+    "black>=19",
     "bump2version>=1.0.0",
     "check-manifest",
-    "flake8>=3.7.8",
+    "flake8>=3.9.2",
     "flake8-black>=0.2.1",
     "flake8-pyproject",
     "mypy",
@@ -80,7 +80,7 @@ force_grid_wrap = 0
 combine_as_imports = true
 
 [tool.mypy]
-python_version = '3.10'
+python_version = '3.8'
 # show_error_codes = true
 # follow_imports = 'silent'
 # strict_optional = true
