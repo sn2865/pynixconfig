@@ -1,4 +1,3 @@
-# still need to deal with the case LSCOLORS alredy exists in .bashrc
 import os
 import os.path
 
