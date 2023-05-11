@@ -21,8 +21,8 @@ run:
 # LINTS #
 #########
 lint:  ## run static analysis with flake8
-	python -m black -t py38 --check pynixconfig setup.py
-	python -m flake8 pynixconfig setup.py
+	python -m black -t py38 --check pynixconfig/linuxconfig.py setup.py
+	python -m flake8 pynixconfig/linuxconfig.py setup.py
 
 # Alias
 lints: lint
