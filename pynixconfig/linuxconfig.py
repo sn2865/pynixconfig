@@ -6,7 +6,7 @@ font_dict = {
     "underlined": "4",
 }
 
-color_dict = {  # change
+color_dict = {
     "red": "31",
     "green": "32",
     "orange": "33",
@@ -30,7 +30,7 @@ def get_color_code(color_string):
         -------
         color_code: int
             color code
-        """
+    """
     return color_dict[color_string]
 
 
@@ -47,7 +47,7 @@ def get_font_code(font_string):
         -------
         font_code: int
             font code
-        """
+    """
     return font_dict[font_string]
 
 
@@ -64,7 +64,7 @@ def get_full_path(curr_path):
         -------
         user_path: str
             user path
-        """
+    """
     return os.path.expanduser(curr_path)
 
 
@@ -84,7 +84,7 @@ def config(color_c, font_c):
         -------
         config: str
             config string to be inputted in .bashrc
-        """
+    """
     return "di=" + font_c + ";" + color_c
 
 
@@ -104,7 +104,7 @@ def add_ls_colors(curr_text, text_add):
         -------
         output: str
             final version of .bashrc file
-        """
+    """
     output = curr_text + "\n" + "LS_COLORS=" + '"{}"'.format(text_add)
     return output
 
@@ -122,7 +122,7 @@ def replace_ls_colors(config_string):
         -------
         new_line: str
             line to add to .bashrc file
-        """
+    """
     new_line = "LS_COLORS=" + '"{}"'.format(config_string)
     return new_line
 
@@ -140,7 +140,7 @@ def bash_shell(color_code):
         -------
         ps1: str
             PS1 configuration with color specified
-        """
+    """
     ps1 = r'PS1="\e[0;' + color_code + r'm[\u@\h \W]\$ \e[m "'
     return ps1
 
@@ -164,7 +164,7 @@ def main(color, font, prompt):
         -------
         config_string: str
             configuration that was added to .bashrc file
-        """
+    """
     path = "~/.bashrc"
 
     full_path = get_full_path(path)
